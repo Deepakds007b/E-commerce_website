@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Cart</title>
+    <style>
+         .nav-bar {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .nav-bar {
+          overflow: hidden;
+          background-color: #333;
+        }
+        .nav-bar a {
+          float: left;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        .nav-bar a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .nav-bar a.active {
+          background-color: rgb(61, 61, 122);
+          color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href='/'>Home</a>
+        <a class = "active" href='/cart'>Cart</a>
+        <a href='/logout'>Logout</a>
+    </div>
+    <h1 style="margin-left: 100px;">Cart Items</h1><br>
+    <div class="container">            
+        <table style="width: 70%;"class="table">
+          <thead>
+            <tr>
+              
+              <th style="font-size: 1.5em;">Product</th>
+              <th style="font-size: 1.5em;">Quantity</th>
+              <th style="font-size: 1.5em;"></th>
+              <th style="font-size: 1.5em;"></th>
+              <th style="font-size: 1.5em;">Amount</th>
+            </tr>
+          </thead>
+          {% for item in item %}
+          {% set a=(item.cart_price|int*item.cart_quantity|int) %}
+          <tbody>
+            <tr>
+              
+              <td><img style="width: 30%;"src={{item.cart_image}}></td>
+              <td style="font-size: 1.2em;">{{item.cart_quantity}}</td>
+              <td style="font-size: 1.2em;"></td>
+              <td style="font-size: 1.2em;"></td>
+              <td style="font-size: 1.2em;">&#8377 {{a}}</td>
+              <td><a style="color:white;"href="/delete/{{item.sno}}"><button style="background-color: blue;font-size: 1.4em;">Delete</button></a></td>
+            </tr>            
+          </tbody>               
+          {% endfor %}
+        </table>        
+      </div>
+      <div style="margin-bottom: 100px;">
+      <a style="margin-left: 500px;font-size: 2em;" href="/check-out"><button style="background-color:blue;color: white;">Proceed for Payment</button></a>
+      </div>
+</body>
+</html>

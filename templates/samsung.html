@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Phone</title>
+    <style>
+    .nav-bar {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .nav-bar {
+        overflow: hidden;
+        background-color: #333;
+      }
+      .nav-bar a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      .nav-bar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .nav-bar a.active {
+        background-color: rgb(61, 61, 122);
+        color: white;
+      }
+      .price{
+          position: absolute;
+          top:100px;
+          left: 900px;
+      }
+      .cartbutton{
+          background-color: rgb(28, 173, 221);
+          font-size: 1.8em;
+          color: white;
+          cursor: pointer;
+      }
+      .cartbutton:hover{
+          background-color: black;
+      }
+
+  </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href='/'>Home</a>
+        <a href='/cart'>Cart</a>
+        <a href='/login'>Login</a>
+        <a href='/mobiles'>Mobiles</a>
+    </div>
+    <div>
+        <img style="width:50%;margin-top: 50px;margin-left: 42px; padding: 0;" src="../static/samsung.jpg" alt="one-plus">
+    </div>
+    <div class="price">
+        <h1> Samsung Galaxy S20 + </h1>
+        <h2>(Cosmic Black, 8GB RAM, 128GB Storage)</h2>
+        <h1> Price : &#8377 74,999/-</h1>
+        <form action="/samsung" method="POST">
+            <label>Quantity</label>
+            <input style=" width:5%;border: 2px solid black; " name="quantity" id="quantity"  value="1" type="number" min="1">
+            <br><br>
+        <button type="submit"  class="cartbutton">Add to cart</button>
+        </form>
+        <h3>
+            Description
+        </h3>
+        <ul style="margin-right: 150px;font-size: 1.1em;">
+            <li>64+12+12MP triple rear camera - 64MP OIS F2.0 tele camera + 12MP F2.2 ultra wide + 12MP (2PD) OIS F1.8 wide rear camera, 10MP (2PD) OIS F2.2 front punch hole camera, rear LED flash</li>
+            <li>15.83 centimeters (6.2-inch) dynamic AMOLED display with capacitive touchscreen, 3200 x 1440 pixels resolution, Quad HD+ resolution</li>
+            <li>Memory, Storage & SIM: 8GB RAM, 128GB internal memory expandable up to 1TB, Dual SIM (nano+nano) dual-standby (4G+4G), microSD card slot (expandable upto 1 TB), hybrid sim slot</li>
+            <li>Android v10.0 operating system with 2.73GHz+2.5GHz+2GHz Exynos 990 octa core processor</li>
+        </ul>
+    </div>
+</body>
+</html>

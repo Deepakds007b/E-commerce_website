@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Plus Phone</title>
+    <style>
+    .nav-bar {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .nav-bar {
+        overflow: hidden;
+        background-color: #333;
+      }
+      .nav-bar a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      .nav-bar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .nav-bar a.active {
+        background-color: rgb(61, 61, 122);
+        color: white;
+      }
+      .price{
+          position: absolute;
+          top:100px;
+          left: 900px;
+      }
+      .cartbutton{
+          background-color: rgb(28, 173, 221);
+          font-size: 1.8em;
+          color: white;
+          cursor: pointer;
+      }
+      .cartbutton:hover{
+          background-color: black;
+      }
+
+  </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href='/'>Home</a>
+        <a href='/cart'>Cart</a>
+        <a href='/login'>Login</a>
+        <a href='/mobiles'>Mobiles</a>
+    </div>
+    <div>
+        <img style="width:50%;margin-top: 50px;margin-left: 42px; padding: 0;" src="../static/one-plus.jpg" alt="one-plus">
+    </div>
+    <div class="price">
+        <h1> OnePlus 8 Pro</h1>
+        <h2>(Glacial Green 12GB RAM+256GB Storage)-</h2>
+        <h1> Price : &#8377 49,999/-</h1>
+        <form action="/one-plus" method="POST">
+            <label>Quantity</label>
+            <input style=" width:5%;border: 2px solid black; " name="quantity" id="quantity"  value="1" type="number" min="1">
+            <br><br>
+        <button type="submit"  class="cartbutton">Add to cart</button>
+        </form>
+        
+        
+        <h3>
+            Description
+        </h3>
+        <ul style="margin-right: 150px;font-size: 1.1em;">
+            <li>48MP rear camera with 4K video at 30/60 fps, 1080P video at 30/60 fps, super slow motion: 720p video at 480 fps, 1080p video at 240fps, time-lapse: 1080P 30fps, 4k 30fps, CINE aspect ratio video recording, video HDR, cat&dog face detect & focus, ultrashot HDR, nightscape, super micro, portrait, pro mode, panorama, AI scene detection, RAW image, audio zoom, audio 3D, infrared photography camera | 16MP front camera
+            </li>
+            <li>17.2212 centimeters (6.78-inch) 120Hz fluid display with 3168 x 1440 pixels resolution, 513 ppi pixel density vibrant color effect color support
+            
+            </li>
+            <li>Memory, Storage & SIM: 12GB RAM | 256GB internal memory | Dual SIM (nano+nano) dual-standby (5G+5G)</li>
+        </ul>
+    </div>
+</body>
+</html>

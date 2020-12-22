@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Television</title>
+    <style>
+    .nav-bar {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .nav-bar {
+        overflow: hidden;
+        background-color: #333;
+      }
+      .nav-bar a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      .nav-bar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .nav-bar a.active {
+        background-color: rgb(61, 61, 122);
+        color: white;
+      }
+      .price{
+          position: absolute;
+          top:100px;
+          left: 800px;
+      }
+      .cartbutton{
+          background-color: rgb(28, 173, 221);
+          font-size: 1.8em;
+          color: white;
+          cursor: pointer;
+      }
+      .cartbutton:hover{
+          background-color: black;
+      }
+
+  </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href='/'>Home</a>
+        <a href='/cart'>Cart</a>
+        <a href='/login'>Login</a>
+    </div>
+    <div>
+        <img style="width:45%;margin-top: 100px;margin-left: 60px; padding: 0;" src="../static/samsung-tv.jpg" alt="one-plus">
+    </div>
+    <div class="price">
+        <h1> Samsung 139 cm (55 inches)</h1>
+        <h1> 4K Ultra HD Smart QLED TV QA55Q95TAKXXL (Carbon Silver) (2020 Model)</h1>
+        <h1> Price : &#8377 1,49,999/-</h1>
+        <form action="/samsung-tv" method="POST">
+            <label>Quantity</label>
+            <input style=" width:5%;border: 2px solid black; " name="quantity" id="quantity"  value="1" type="number" min="1">
+            <br><br>
+        <button type="submit"  class="cartbutton">Add to cart</button>
+        </form>
+        
+        <h3>
+            Description
+        </h3>
+        <ul style="margin-right: 150px;font-size: 1.1em;">
+            <li>Resolution: 4K Ultra HD (3840X2160) | Refresh Rate: 60 hertz</li>
+            <li>Connectivity: 4 HDMI ports to connect set top box, Blu Ray players, gaming console | 2 USB ports to connect hard drives and other USB devices</li>
+            <li>Sound : 60 Watts Output | Dolby Digital Plus | Adaptive Sound Plus
+            <li>Smart TV Features : Voice Assistants | SmartThings App | Personal Computer | Home Cloud | Live Cast | Screen Share | Music System</li>
+            <li>Display: LED Panel | Wide Colour Enhancer | HD Picture Quality | Slim & Stylish Design</li>
+        </ul>
+    </div>
+</body>
+</html>

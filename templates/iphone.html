@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iphone</title>
+    <style>
+    .nav-bar {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .nav-bar {
+        overflow: hidden;
+        background-color: #333;
+      }
+      .nav-bar a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      .nav-bar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .nav-bar a.active {
+        background-color: rgb(61, 61, 122);
+        color: white;
+      }
+      .price{
+          position: absolute;
+          top:100px;
+          left: 800px;
+      }
+      .cartbutton{
+          background-color: rgb(28, 173, 221);
+          font-size: 1.8em;
+          color: white;
+          cursor: pointer;
+      }
+      .cartbutton:hover{
+          background-color: black;
+      }
+
+  </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href='/'>Home</a>
+        <a href='/cart'>Cart</a>
+        <a href='/login'>Login</a>
+        <a href='/mobiles'>Mobiles</a>
+
+    </div>
+    <div>
+        <img style="width:38%;margin-top: 50px;margin-left: 102px; padding: 0;" src="../static/iphone.jpg" alt="one-plus">
+    </div>
+    <div class="price">
+        <h1> New Apple iPhone 12 (256GB) - Black</h1>
+        <h1> Price : &#8377 94,999/-</h1>
+        <form action="/iphone" method="POST">
+            <label>Quantity</label>
+            <input style=" width:5%;border: 2px solid black; " name="quantity" id="quantity"  value="1" type="number" min="1">
+            <br><br>
+        <button type="submit"  class="cartbutton">Add to cart</button>
+        </form>
+        <h3>
+            Description
+        </h3>
+        <ul style="margin-right: 150px;font-size: 1.1em;">
+            <li>6.1-inch Super Retina XDR display</li>
+            <li>Ceramic Shield, tougher than any smartphone glass</li>
+            <li>A14 Bionic chip, the fastest chip ever in a smartphone</li>
+            <li>Advanced dual-camera system with 12MP Ultra Wide and Wide cameras; Night mode, Deep Fusion, Smart HDR 3, 4K Dolby Vision HDR recording</li>
+            <li>12MP TrueDepth front camera with Night mode, 4K Dolby Vision HDR recording</li>
+            <li>Industry-leading IP68 water resistance</li>
+            <li>Supports MagSafe accessories for easy attach and faster wireless charging</li>
+            <li>iOS with redesigned widgets on the Home screen, all-new App Library, App Clips and more</li>
+        </ul>
+    </div>
+</body>
+</html>
