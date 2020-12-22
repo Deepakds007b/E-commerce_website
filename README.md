@@ -1,2 +1,2 @@
 # E-commerce_website
-Prototype of a E-commerce website with Log-in features
+E-commerce website with features like Log-in,Sign-up,Add to cart
